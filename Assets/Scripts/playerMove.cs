@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour {
 
-    public float speed;
-    private int state;
-    private string direction = "up";
-    private bool touching = false;
+	private int state;
+	int speed = 5;
+	private float bulletSpeed = 20;
+	public GameObject Bullet;
+	private List<GameObject> Projectile = new List<GameObject> ();
+	//public Vector2 move = new Vector2 ();
+	int bulletMoveA;
+	int bulletMoveB;
     
 
     Rigidbody2D rBody;
 
     // Use this for initialization
     void Start () {
-        rBody = this.GetComponent<Rigidbody2D>();
+		rBody = this.GetComponent<Rigidbody2D>();
         state = 0;
     }
-	
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if(other.gameObject.tag == "Enemy")
+		{
+			Destroy (gameObject);
+			Destroy (other.gameObject);
+		}
+	}
 	// Update is called once per frame
 	void Update () {
         #region Move
@@ -115,17 +127,41 @@ public class playerMove : MonoBehaviour {
         }
         #endregion
 
+
+		if (Input.GetKeyDown (KeyCode.Space)) 
+		{
+			
+			GameObject bullet = GameObject.Instantiate (this.Bullet, transform.position, Quaternion.identity);
+			Projectile.Add (bullet);
+			if (state == 0) {
+				bulletMoveA = 0;
+				bulletMoveB = 1;
+			}
+			if (state == 1) {
+				bulletMoveA = 0;
+				bulletMoveB = -1;
+			}
+			if (state == 2) {
+				bulletMoveA = -1;
+				bulletMoveB = 0;
+			}
+			if (state == 3) {
+				bulletMoveA = 1;
+				bulletMoveB = 0;
+			}
+		}
+
+			for (int i = 0; i < Projectile.Count; i++) {            
+				GameObject aBullet = Projectile [i];            
+				if (aBullet != null) {                
+					aBullet.transform.Translate (new Vector3 (bulletMoveA, bulletMoveB) * Time.deltaTime * bulletSpeed);
+				}  
+			}
+
+
     }
     
-        void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Solid")
-        {
-            
-            
-            Debug.Log("You hit a thing!");
-        }
-    }
+
     
 
 }

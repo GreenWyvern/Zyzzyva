@@ -46,9 +46,15 @@ public class ladyMovement : MonoBehaviour {
                 { rBody.velocity = this.transform.up * speed; } else { rBody.velocity = this.transform.right * speed; }
                 initial = true;
             }
-            
         }
     }
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if(other.gameObject.tag == "Bullet")
+		{
+			Destroy (gameObject);
+		}
+	}
 
     // Update is called once per frame
     void Update () {
