@@ -4,19 +4,10 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public GameObject player; 
-
-	private Vector3 focus; 
-
-	void Start () 
-	{
-		focus = transform.position - player.transform.position;
-	}
-
+	public GameObject player;
 
 	void LateUpdate () 
 	{
-
-		transform.position = player.transform.position + focus;
-	}
+        transform.position = new Vector3(transform.position.x, player.transform.position.y + 2.5f,-1);
+    }
 }

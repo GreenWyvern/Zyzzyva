@@ -14,6 +14,7 @@ public class tileRandomizer : MonoBehaviour {
             this.GetComponent<SpriteRenderer>().sprite = altTile;
         }
 
+        transform.position = new Vector3(transform.position.x,transform.position.y, 1);
 	}
 	
 	// Update is called once per frame
