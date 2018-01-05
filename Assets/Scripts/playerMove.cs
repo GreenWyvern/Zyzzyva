@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class playerMove : MonoBehaviour {
 
+	public Transform SpawnPoint;
+	bool respawn = false;
 	private int state;
 	int speed = 5;
 	private float bulletSpeed = 20;
 	public GameObject Bullet;
+	int lives = 3;
 	private List<GameObject> Projectile = new List<GameObject> ();
 	//public Vector2 move = new Vector2 ();
 	int bulletMoveA;
@@ -26,12 +29,28 @@ public class playerMove : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
-			Destroy (gameObject);
-			Destroy (other.gameObject);
+			
+			if (lives >= 0) {
+				Destroy (other.gameObject);
+				lives--;
+				Respawn ();
+			} 
 		}
 	}
+
+	public void Respawn()
+	{
+		this.transform.position = SpawnPoint.position;
+	}
+
+
 	// Update is called once per frame
 	void Update () {
+
+		if (lives <= 0) {
+			Destroy (gameObject);
+		}
+
         #region Move
 
         
