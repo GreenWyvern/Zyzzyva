@@ -7058,6 +7058,10 @@ Prefab:
       propertyPath: m_Name
       value: Leaf1_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1763108056966208, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
+      propertyPath: m_TagString
+      value: Leaf
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
   m_IsPrefabParent: 0
@@ -10515,6 +10519,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 293bd9c18f2207d4e8d17fdefd14059a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &488720162
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -6.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
+      propertyPath: m_RootOrder
+      value: 1074
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0a87af5ceec3cad45b4cfa3d7f41808e, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &494177887
 Prefab:
@@ -19604,11 +19650,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4277190185423554, guid: 97776186333246a468a610710592524d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -5.63
+      value: -5.61
       objectReference: {fileID: 0}
     - target: {fileID: 4277190185423554, guid: 97776186333246a468a610710592524d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -6.3
+      value: -6.31
       objectReference: {fileID: 0}
     - target: {fileID: 4277190185423554, guid: 97776186333246a468a610710592524d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19634,6 +19680,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114726742229897634, guid: 97776186333246a468a610710592524d,
+        type: 2}
+      propertyPath: SpawnPoint
+      value: 
+      objectReference: {fileID: 4059076649628992, guid: 0a87af5ceec3cad45b4cfa3d7f41808e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97776186333246a468a610710592524d, type: 2}
   m_IsPrefabParent: 0
@@ -21979,6 +22031,10 @@ Prefab:
     - target: {fileID: 1763108056966208, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
       propertyPath: m_Name
       value: Leaf1_0 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763108056966208, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
+      propertyPath: m_TagString
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
@@ -28005,6 +28061,10 @@ Prefab:
     - target: {fileID: 1763108056966208, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
       propertyPath: m_Name
       value: Leaf1_0 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763108056966208, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
+      propertyPath: m_TagString
+      value: Leaf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6dc0e6af300c4ff42a1999443ead30c4, type: 2}
