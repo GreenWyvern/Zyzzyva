@@ -13,10 +13,11 @@ public class Bullet : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Solid")
+		if(other.gameObject.tag == "Enemy" || other.gameObject.tag == "Solid" || other.gameObject.tag == "Leaf")
 		{
 			Destroy (gameObject);
 		}
+
 	}
 
 	private void _checkBounds(){
