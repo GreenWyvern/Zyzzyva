@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMove : MonoBehaviour
 {
 
     public Transform SpawnPoint;
-    bool respawn = false;
     private int state;
     int speed = 5;
     private float bulletSpeed = 20;
@@ -50,10 +50,10 @@ public class playerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (lives <= 0)
         {
             Destroy(gameObject);
+			SceneManager.LoadScene("GameOver");
         }
 
         #region Move

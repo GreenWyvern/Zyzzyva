@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMechanics : MonoBehaviour {
-	public playerMove Player;
-	public ladyMovement Enemy;
-	public Bullet bullet;
 
-	//public Text Lives;
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Player")
+		{
+			SceneManager.LoadScene ("LevelTwo");
+		}
+	}
+
 	// Update is called once per frame
 	void Update () {
 

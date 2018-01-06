@@ -30,7 +30,7 @@ public class ladyMovement2 : MonoBehaviour {
 
 		void OnTriggerEnter2D(Collider2D other)
 		{
-			if (other.tag == "Solid")
+		if (other.gameObject.tag == "Solid")
 			{
 				if (initial)
 				{
