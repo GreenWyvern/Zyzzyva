@@ -8,8 +8,8 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		this.gameObject.name = "Bullet";	
-	}
+		this.gameObject.name = "Bullet";
+    }
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
