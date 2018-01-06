@@ -19,10 +19,10 @@ public class FlowerUP_2 : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			//attempt to destroy game objject, or hide it once the buff has been picked up. Either case stops the coroutine.
-			//  gameObject.SetActive(false);
-			//  gameObject.GetComponent<Renderer>().enabled = false;
-			bullet.transform.localScale = new Vector3(15, 15, bullet.transform.position.z);
+            //attempt to destroy game objject, or hide it once the buff has been picked up. Either case stops the coroutine.
+            //  gameObject.SetActive(false);
+            gameObject.GetComponent<Renderer>().enabled = false;
+            bullet.transform.localScale = new Vector3(15, 15, bullet.transform.position.z);
 			StartCoroutine(ScaleBuff());
 		}
 
