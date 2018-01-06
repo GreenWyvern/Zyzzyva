@@ -5,7 +5,6 @@ using UnityEngine;
 public class playerMove : MonoBehaviour {
 
 	public Transform SpawnPoint;
-	bool respawn = false;
 	private int state;
 	int speed = 5;
 	private float bulletSpeed = 20;
@@ -29,7 +28,6 @@ public class playerMove : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
-			
 			if (lives >= 0) {
 				Destroy (other.gameObject);
 				lives--;
